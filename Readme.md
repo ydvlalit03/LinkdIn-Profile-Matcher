@@ -44,7 +44,7 @@ Our approach combines several advanced techniques:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/NeevaditVerma/NLP_GCTech_PS.git
+[git clone https://github.com/ydvlalit03/LinkdIn-Profile-Matcher.git
 cd linkedin-profile-matcher
 ```
 2. Install dependencies:
