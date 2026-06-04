@@ -1,55 +1,57 @@
 # LinkedIn Profile Matcher
 
-A powerful tool for finding and comparing LinkedIn profiles to identify potential B2B sales leads by calculating similarity scores between profiles.
+A tool for finding and comparing LinkedIn profiles to identify potential **B2B sales leads**, by computing similarity scores between profiles using both semantic text matching and image recognition.
 
-## About Recepto
+---
 
-Recepto is a B2B sales lead generation platform that identifies buying intent from various online channels. The platform collects unstructured data, structures it, and uses it to enrich a database of millions of people profiles. Through sophisticated algorithms, Recepto defines the relevance and strength of buying intent based on a variety of factors..
+## Overview
 
-## Project Overview
+The tool:
 
-This tool is designed to:
-1. Extract detailed information from LinkedIn profiles
-2. Transform raw profile data into a structured format
-3. Compare profiles using semantic similarity metrics and image recognition
-4. Identify the most similar profiles for potential lead generation
+1. Extracts detailed information from LinkedIn profiles
+2. Transforms raw profile data into a structured format
+3. Compares profiles using semantic similarity + image recognition
+4. Ranks the most similar profiles for lead generation
 
-## Technical Approach
+---
 
-Our approach combines several advanced techniques:
+## How It Works
 
 ### Data Extraction
-- Uses web scraping with rotating user agents to mimic different bots
-- Extracts structured data from LinkedIn profile pages using BeautifulSoup
-- Captures personal information, work history, education, and more
+- Web scraping with rotating user agents
+- Structured parsing of profile pages with BeautifulSoup (personal info, work history, education)
 
 ### Profile Analysis
-- Converts unstructured profile data into standardized formats
-- Enriches profiles with additional company information
-- Implements semantic text comparison using sentence transformers
-- Uses image recognition with BEiT model for profile picture similarity
+- Normalizes unstructured profiles into a standard schema, enriched with company info
+- **Semantic text similarity** via sentence transformers
+- **Image similarity** via the BEiT vision model on profile pictures
 
-### Search and Matching
-- Performs intelligent search queries based on profile information
-- Uses weighted scoring system across multiple profile fields
-- Combines text and image similarity for comprehensive matching
+### Search & Matching
+- Builds intelligent search queries from profile fields
+- Weighted scoring across multiple fields, combining text + image similarity
 
-## Installation
+---
 
-### Prerequisites
-- Python 3.8+
-- pip package manager
+## Tech Stack
 
-### Setup
+- **Scraping**: requests, BeautifulSoup, rotating user agents
+- **NLP**: sentence-transformers (semantic similarity)
+- **Vision**: BEiT (image similarity)
+- **Language**: Python 3.8+
 
-1. Clone the repository:
+---
+
+## Quick Start
+
 ```bash
-[git clone https://github.com/ydvlalit03/LinkdIn-Profile-Matcher.git
-cd linkedin-profile-matcher
-```
-2. Install dependencies:
-```bash
+git clone https://github.com/ydvlalit03/LinkdIn-Profile-Matcher.git
+cd LinkdIn-Profile-Matcher
 pip install -r requirements.txt
+python script.py
 ```
 
-⚠️ **Note:** This tool is for **educational purposes only**. Web scraping LinkedIn may violate their [Terms of Service](https://www.linkedin.com/legal/user-agreement). Use responsibly and at your own risk.
+---
+
+## Disclaimer
+
+For **educational purposes only**. Scraping LinkedIn may violate their [Terms of Service](https://www.linkedin.com/legal/user-agreement) — use responsibly and at your own risk.
