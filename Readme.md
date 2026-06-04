@@ -1,47 +1,78 @@
-# LinkedIn Profile Matcher
+<div align="center">
 
-A tool for finding and comparing LinkedIn profiles to identify potential **B2B sales leads**, by computing similarity scores between profiles using both semantic text matching and image recognition.
+# 🔗 LinkedIn Profile Matcher
 
----
+### Find and rank similar LinkedIn profiles for B2B lead generation — text + image similarity
 
-## Overview
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)
+![SentenceTransformers](https://img.shields.io/badge/SentenceTransformers-semantic-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
+![BEiT](https://img.shields.io/badge/BEiT-image_similarity-6A5ACD?style=flat-square)
+![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-scraping-43B02A?style=flat-square)
 
-The tool:
-
-1. Extracts detailed information from LinkedIn profiles
-2. Transforms raw profile data into a structured format
-3. Compares profiles using semantic similarity + image recognition
-4. Ranks the most similar profiles for lead generation
+</div>
 
 ---
 
-## How It Works
+## 📖 Overview
 
-### Data Extraction
-- Web scraping with rotating user agents
-- Structured parsing of profile pages with BeautifulSoup (personal info, work history, education)
+**LinkedIn Profile Matcher** finds and compares LinkedIn profiles to surface potential **B2B sales leads**. Given a reference profile, it scrapes and structures candidate profiles, then scores how similar they are using both **semantic text matching** and **profile-picture image recognition** — combining the two into a single weighted relevance score for lead generation.
 
-### Profile Analysis
-- Normalizes unstructured profiles into a standard schema, enriched with company info
+> Built around the kind of buying-intent lead-enrichment problem platforms like Recepto tackle: take unstructured profile data, structure it, and rank it by relevance.
+
+---
+
+## 📑 Table of Contents
+
+- [What it does](#-what-it-does)
+- [How it works](#-how-it-works)
+- [Tech stack](#-tech-stack)
+- [Installation](#-installation)
+- [Disclaimer](#-disclaimer)
+
+---
+
+## 🎯 What it does
+
+1. **Extracts** detailed information from LinkedIn profiles
+2. **Transforms** raw profile data into a structured format
+3. **Compares** profiles using semantic similarity + image recognition
+4. **Ranks** the most similar profiles for potential lead generation
+
+---
+
+## 🔄 How it works
+
+### 🕸️ Data extraction
+- Web scraping with **rotating user agents** to mimic different clients
+- Structured parsing of profile pages with **BeautifulSoup** — captures personal info, work history, education and more
+
+### 🧬 Profile analysis
+- Normalizes unstructured profiles into a standard schema, enriched with company information
 - **Semantic text similarity** via sentence transformers
-- **Image similarity** via the BEiT vision model on profile pictures
+- **Image similarity** via the **BEiT** vision model on profile pictures
 
-### Search & Matching
+### 🔍 Search & matching
 - Builds intelligent search queries from profile fields
-- Weighted scoring across multiple fields, combining text + image similarity
+- Applies a **weighted scoring system** across multiple fields
+- Combines text + image similarity into one comprehensive match score
 
 ---
 
-## Tech Stack
+## 🛠️ Tech stack
 
-- **Scraping**: requests, BeautifulSoup, rotating user agents
-- **NLP**: sentence-transformers (semantic similarity)
-- **Vision**: BEiT (image similarity)
-- **Language**: Python 3.8+
+| Concern | Technology |
+|---------|------------|
+| **Scraping** | requests, BeautifulSoup, rotating user agents |
+| **Text similarity** | sentence-transformers (semantic embeddings) |
+| **Image similarity** | BEiT vision model |
+| **Language** | Python 3.8+ |
 
 ---
 
-## Quick Start
+## 📦 Installation
+
+### Prerequisites
+- Python 3.8+ and pip
 
 ```bash
 git clone https://github.com/ydvlalit03/LinkdIn-Profile-Matcher.git
@@ -52,6 +83,6 @@ python script.py
 
 ---
 
-## Disclaimer
+## ⚠️ Disclaimer
 
-For **educational purposes only**. Scraping LinkedIn may violate their [Terms of Service](https://www.linkedin.com/legal/user-agreement) — use responsibly and at your own risk.
+This tool is for **educational purposes only**. Web scraping LinkedIn may violate their [Terms of Service](https://www.linkedin.com/legal/user-agreement). Use responsibly and at your own risk.
